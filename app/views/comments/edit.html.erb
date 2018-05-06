@@ -1,0 +1,9 @@
+<h1>Edit my comment<h1>
+<%= form_for(@comment) do |comment_form| %>
+	<%= comment_form.text_field :content %>
+	<%= comment_form.submit "Modifier le commentaire" %>
+<% end %>
+
+<%= form_for(@comment, method: :delete) do |comment_form| %>
+	<%= comment_form.submit "Supprimer le commentaire" %>
+<% end %>

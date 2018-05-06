@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="jumbotron">
+		<h1>Index des gossips</h1>
+		<table class="table">
+			<tr>
+				<th>Nom du gossip</th>
+				<th>Createur du gossip</th>
+				<th>Date du gossip</th>
+				<th>Nombre de commentaire</th>
+				<th>Lien</th>
+			</tr>
+			<% @gossip.each do |gossip| %>
+				<tr>
+					<td><%= gossip.name %></td>
+					<td><%= User.find(gossip.user_id).name %></td>
+					<td><%= gossip.date.strftime("%b %d %Y") %></td>
+					<td><%= gossip.comments.count %></td>
+					<td><%= link_to 'Voir le gossip', gossip_path(gossip.id) %></td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+</div>

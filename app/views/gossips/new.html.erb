@@ -1,0 +1,11 @@
+<div class="container">
+	<div class="jumbotron">
+		<p>Mon nouveau gossip ... </p>
+		<%= form_for(@gossip) do |gossip_form| %>
+			<%= gossip_form.text_field :name, placeholder: "Titre", :size => 113, :class => "form-control" %>
+			<%= gossip_form.text_area :introduction, placeholder: "Introduction", rows: 2, cols: 113, :class => "form-control" %><br>
+			<%= gossip_form.text_area :content, placeholder: "Votre contenu ...", rows: 5, cols: 113, :class => "form-control" %><br>
+			<%= gossip_form.submit "Poster votre gossip" %>
+		<% end %>
+	</div>
+</div>

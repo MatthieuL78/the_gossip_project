@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="jumbotron">
+		<h1>Bienvenue <%= current_user.name %></h1>
+		<div class="profile-buttons">
+			<p><%= link_to "Editer le profil", edit_user_registration_path, :class => 'btn profile-btn' %>
+			<%= link_to "Creer un gossip", new_gossip_path, :class => 'btn profile-btn' %></p>
+		</div>
+		<table class="table">
+			<tr>
+				<th>Nom du gossip</th>
+				<th>Nombre de commentaire</th>
+				<th>Date de creation</th>
+				<th>Lien</th>
+			</tr>
+			<% Gossip.all.each do |gossip| %>
+				<% if gossip.user_id == current_user.id %>
+				<tr>
+					<td><%= gossip.name %></td>
+					<td><%= gossip.comments.count %></td>
+					<td><%= gossip.date.strftime("%b %d %Y") %></td>
+					<td><%= link_to "Voir le gossip", gossip_path(gossip.id) %></td>
+				</tr>
+				<% end %>
+			<% end %>
+		</table>
+	</div>
+</div>
