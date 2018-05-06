@@ -5,7 +5,7 @@ Version améliorée du premier CRUD réalisé (gossip_db). Comprend les models u
 ## Lancer le projet
 Pour lancer le projet, sur le terminal (dans le dossier concerne) :
 ```
-bundle install --without production
+bundle 
 ```
 
 ```
