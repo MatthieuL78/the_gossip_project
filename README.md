@@ -20,7 +20,7 @@ Vous pouvez observer les pages dans 'localhost:3000'
 
 Vous pouvez voir le projet sur heroku : 
 
-* https://ancient-harbor-48418.herokuapp.com/
+* https://stark-gorge-45696.herokuapp.com/
 
 ## CSS
 Le CSS est dans le assets/stylesheets/application.css
